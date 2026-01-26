@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 
 const Footer1 = () => {
   return (
-    <footer className="w-full">
-      <div className="max-w-full mx-auto bg-[#002B5B] text-white ">
-        <div className="px-4 py-24">
+    <footer className="w-full font-poppins">
+      <div className="max-w-full mx-auto bg-[#002B5B] text-white  px-4 py-24">
+        <div className="">
          
        
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-sm">

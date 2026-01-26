@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="w-full font-poppins">
-      <div className="max-w-7xl mx-auto bg-[#002B5B] text-white rounded-t-3xl">
-        <div className="px-4 py-24">
+      <div className="max-w-8xl mx-auto bg-[#002B5B] text-white  px-4 py-24">
+        <div className="">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* LEFT FORM */}
             <div>

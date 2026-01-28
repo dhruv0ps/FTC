@@ -5,15 +5,15 @@ import TestimonialsCarousel from "./TestimonialsCarousel";
 const AboutUs = () => {
   return (
     <>
-    <section className="w-full bg-white px-4 py-24 font-poppins">
+    <section className="w-full bg-white px-4 py-20 font-poppins">
       <div className="max-w-7xl mx-auto">
 
         {/* PAGE HEADER */}
         <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-secondary">
+          <h1 className="text-4xl md:text-5xl font-semibold text-secondary">
             About Us
           </h1>
-          <p className="mt-4 text-lg md:text-xl font-semibold text-primary italic">
+          <p className="mt-2 text-lg md:text-xl font-semibold text-primary">
             Fast approvals. No Judgement. No Dealer Games.
           </p>
         </div>
@@ -22,11 +22,11 @@ const AboutUs = () => {
         <div className="my-16 border-t border-gray-300" />
 
         {/* CONTENT GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
           {/* LEFT COLUMN */}
           <div>
-            <h2 className="text-4xl font-extrabold leading-tight text-secondary">
+            <h2 className="text-6xl font-semibold  text-secondary">
               We make <br />
               financing <span className="text-primary">easy.</span>
             </h2>

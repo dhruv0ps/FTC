@@ -1,19 +1,19 @@
-import {
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
+
 import Footer from "../Footer/Footer";
+import img3 from "../../assets/IMG11.png"
+import img2 from "../../assets/IMG12.png"
+import img1 from "../../assets/IMG13.png"
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const ContactUs = () => {
   return (
     <>
-    <section className="w-full bg-white px-4 py-24">
+    <section className="w-full bg-white px-4 py-24 font-poppins">
       <div className="max-w-7xl mx-auto">
 
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-secondary">
+          <h1 className="text-4xl md:text-5xl font-semibold text-secondary">
             Contact Us
           </h1>
           <p className="mt-4 text-lg text-secondary">
@@ -22,29 +22,49 @@ const ContactUs = () => {
           </p>
         </div>
 
-        {/* CONTACT INFO */}
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-          <div className="flex flex-col items-center gap-3">
-            <FaPhoneAlt size={26} className="text-primary" />
-            <p className="font-semibold text-secondary">1300 038 206</p>
-          </div>
+   {/* CONTACT INFO */}
+<div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
 
-          <div className="flex flex-col items-center gap-3">
-            <FaEnvelope size={26} className="text-primary" />
-            <p className="font-semibold text-secondary">
-              info@FinanceTheCar.com.au
-            </p>
-          </div>
+  {/* PHONE */}
+  <div className="flex flex-col items-center gap-3">
+    <img
+      src={img1}
+      alt="Phone"
+      className="w-64 h-16 object-contain"
+    />
+    <p className="font-semibold text-secondary">
+      1300 038 206
+    </p>
+  </div>
 
-          <div className="flex flex-col items-center gap-3">
-            <FaMapMarkerAlt size={26} className="text-primary" />
-            <p className="font-semibold text-secondary text-sm">
-              9/11 Yazaki Way,<br />
-              Carrum Downs 3201,<br />
-              VIC Australia
-            </p>
-          </div>
-        </div>
+  {/* EMAIL */}
+  <div className="flex flex-col items-center gap-3">
+    <img
+      src={img2}
+      alt="Email"
+      className="w-32 h-16 object-contain"
+    />
+    <p className="font-semibold text-secondary">
+      info@FinanceTheCar.com.au
+    </p>
+  </div>
+
+  {/* LOCATION */}
+  <div className="flex flex-col items-center gap-3">
+    <img
+      src={img3}
+      alt="Location"
+      className="w-32 h-16 object-contain"
+    />
+    <p className="font-semibold text-secondary text-sm">
+      9/11 Yazaki Way,<br />
+      Carrum Downs 3201,<br />
+      VIC Australia
+    </p>
+  </div>
+
+</div>
+
 
         {/* CONTENT GRID */}
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -74,52 +94,61 @@ const ContactUs = () => {
               "
             >
               Get Directions
-              <span className="text-xl">→</span>
+            <span className="text-2xl leading-none"><FaArrowRightLong /></span>
             </a>
           </div>
 
           {/* FORM */}
-          <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="bg-gray-100 px-4 py-3 rounded-lg outline-none"
-              />
-              <input
-                type="text"
-                placeholder="Phone Number"
-                className="bg-gray-100 px-4 py-3 rounded-lg outline-none"
-              />
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="bg-gray-100 px-4 py-3 rounded-lg outline-none sm:col-span-2"
-              />
-              <textarea
-                placeholder="Message"
-                rows={5}
-                className="bg-gray-100 px-4 py-3 rounded-lg outline-none sm:col-span-2 resize-none"
-              />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-              <button
-                className="
-                  sm:col-span-2
-                  bg-primary
-                  hover:bg-hover
-                  text-white
-                  font-semibold
-                  py-3
-                  rounded-lg
-                  flex items-center justify-center gap-2
-                  transition-colors
-                "
-              >
-                Submit
-                <span className="text-xl">→</span>
-              </button>
-            </div>
-          </div>
+  {/* LEFT COLUMN – INPUTS */}
+  <div className="flex flex-col gap-4">
+    <input
+      type="text"
+      placeholder="Full Name"
+      className="bg-gray-100 px-4 py-3 rounded-lg outline-none"
+    />
+
+    <input
+      type="text"
+      placeholder="Phone Number"
+      className="bg-gray-100 px-4 py-3 rounded-lg outline-none"
+    />
+
+    <input
+      type="email"
+      placeholder="Email Address"
+      className="bg-gray-100 px-4 py-3 rounded-lg outline-none"
+    />
+  </div>
+
+  {/* RIGHT COLUMN – MESSAGE + BUTTON */}
+  <div className="flex flex-col gap-4">
+    <textarea
+      placeholder="Message"
+      rows={4}
+      className="bg-gray-100 px-4 py-3 rounded-lg outline-none resize-none"
+    />
+
+    <button
+      className="
+        bg-primary
+        hover:bg-hover
+        text-white
+        font-semibold
+        py-3
+        rounded-lg
+        flex items-center justify-center gap-2
+        transition-colors
+      "
+    >
+      Submit
+            <span className="text-2xl leading-none"><FaArrowRightLong /></span>
+    </button>
+  </div>
+
+</div>
+
 
         </div>
 

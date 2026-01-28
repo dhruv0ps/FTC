@@ -1,53 +1,29 @@
 import { Link } from "react-router-dom";
+import Logo from "../assets/LOGO12.png";
 
 const Header = () => {
   return (
     <header className="w-full border-b bg-white font-poppins">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between relative">
+  {/* Logo */}
+  <Link to="/" className="flex items-center">
+    <img src={Logo} alt="Logo" className="h-16 w-auto" />
+  </Link>
 
-         <Link
-            to="/"
-            className="hover:text-hover transition-colors"
-          >
-        <h1 className="text-2xl font-bold text-primary">
-          FinanceTheCar
-        </h1>
-        </Link>
+  <nav className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
+    <Link to="/finance-my-car" className="text-secondary font-bold hover:text-hover transition-colors">
+      Finance My Car
+    </Link>
+    <Link to="/about-us" className="text-secondary font-bold hover:text-hover transition-colors">
+      About Us
+    </Link>
+  </nav>
 
-        {/* Navigation */}
-        <nav className="hidden md:flex gap-8 text-secondary font-medium">
-          <Link
-            to="/finance-my-car"
-            className="hover:text-hover transition-colors"
-          >
-            Finance My Car
-          </Link>
+  <Link to="/contact-us" className="bg-primary hover:bg-hover text-white font-extrabold px-6 py-2.5 rounded-lg transition-colors">
+    Contact Us
+  </Link>
+</div>
 
-          <Link
-            to="/about-us"
-            className="hover:text-hover transition-colors"
-          >
-            About Us
-          </Link>
-        </nav>
-
-        {/* CTA Button */}
-        <Link
-          to="/contact-us"
-          className="
-            bg-primary
-            hover:bg-hover
-            text-white
-            px-5 py-2
-            rounded-lg
-            font-semibold
-            transition-colors
-          "
-        >
-          Enquire Now!
-        </Link>
-
-      </div>
     </header>
   );
 };

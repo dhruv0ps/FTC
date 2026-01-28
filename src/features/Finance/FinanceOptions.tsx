@@ -3,21 +3,35 @@ import {
   HiOutlineEmojiHappy,
   HiCheck,
 } from "react-icons/hi";
-import {
-  HiOutlineChartBar,
-  HiOutlineUser,
-  HiOutlineBriefcase,
-  HiOutlineDocumentText,
-  HiOutlineCash,
-} from "react-icons/hi";
-import Footer1 from "../Footer/Footer1";
 
-const whoWeHelp = [
-  { icon: HiOutlineChartBar, label: "Bad Credit / Defaults" },
-  { icon: HiOutlineUser, label: "Self Employed\n& ABN Holders" },
-  { icon: HiOutlineBriefcase, label: "Casual or New Job\nHolders" },
-  { icon: HiOutlineDocumentText, label: "Low Doc Applications" },
-  { icon: HiOutlineCash, label: "First Time Buyers" },
+import Footer1 from "../Footer/Footer1";
+import img1 from "../../assets/Img1.png"
+import img3 from "../../assets/img3.png"
+import img4 from "../../assets/img4.png"
+import img5 from "../../assets/img5.png"
+import img6 from "../../assets/img6.png"
+import { FaArrowRightLong } from "react-icons/fa6";
+const items = [
+  {
+    img: img1,
+    label: "Bad Credit / Defaults",
+  },
+  {
+    img: img6,
+    label: "Self Employed\n& ABN Holders",
+  },
+  {
+    img: img5,
+    label: "Casual or New Job\nHolders",
+  },
+  {
+    img: img4,
+    label: "Low Doc Applications",
+  },
+  {
+    img: img3,
+    label: "First Time Buyers",
+  },
 ];
 
 const FinanceOptions = () => {
@@ -27,46 +41,45 @@ const FinanceOptions = () => {
       <div className="max-w-7xl mx-auto">
 
         {/* ================= TOP SECTION ================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-start">
           {/* LEFT TEXT */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-secondary leading-tight">
+            <h1 className="text-4xl md:text-7xl font-semibold text-secondary leading-tight">
               Check Your <br /> Finance Options
             </h1>
 
-            <p className="mt-4 text-lg font-semibold text-primary italic">
+            <p className="mt-4 text-lg font-semibold text-primary ">
               It takes less than 30 seconds!
             </p>
 
-            <p className="mt-2 text-secondary">
+            <p className="mt-2 text-2xl text-secondary">
               No Obligation, No Spam, We’ll call you shortly.
             </p>
           </div>
 
           {/* RIGHT FORM */}
-          <div>
-            <p className="mb-3 font-semibold text-secondary">
+          <div className="mt-20">
+            <p className="mb-3 font-semibold font-base text-secondary">
               Contact Form
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
                 type="text"
                 placeholder="Full Name"
-                className="bg-gray-100 px-4 py-3 rounded-lg outline-none"
+                className="bg-gray-200 px-4 py-3 rounded-lg border-gray-200"
               />
               <input
                 type="text"
                 placeholder="Phone Number"
-                className="bg-gray-100 px-4 py-3 rounded-lg outline-none"
+                className="bg-gray-200 px-4 py-3 rounded-lg border-gray-200"
               />
               <input
                 type="email"
                 placeholder="Email Address"
-                className="bg-gray-100 px-4 py-3 rounded-lg outline-none sm:col-span-2"
+                className="bg-gray-200 px-4 py-3 rounded-lg  border-gray-200"
               />
               <button
                 className="
-                  sm:col-span-2
                   bg-primary
                   hover:bg-hover
                   text-white
@@ -78,7 +91,7 @@ const FinanceOptions = () => {
                 "
               >
                 Enquire Now
-                <span className="text-xl">→</span>
+            <span className="text-2xl leading-none"><FaArrowRightLong /></span>
               </button>
             </div>
           </div>
@@ -139,26 +152,30 @@ const FinanceOptions = () => {
 
         {/* ================= WHO WE HELP ================= */}
         <div className="mt-24 text-center">
-          <h2 className="text-4xl font-extrabold text-secondary">
+          <h2 className="text-4xl font-bold text-secondary">
             Who We Help
           </h2>
 
-          <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-12">
-            {whoWeHelp.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={index}
-                  className="flex flex-col items-center gap-4"
-                >
-                  <Icon size={56} className="text-secondary" />
-                  <p className="text-secondary font-semibold whitespace-pre-line">
-                    {item.label}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+      <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-12">
+          {items.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center gap-4"
+              >
+                <img
+  src={item.img}
+  alt={item.label}
+  className="w-24 h-16 object-contain"
+/>
+
+                <p className="text-[#1F3A5F] font-semibold leading-snug whitespace-pre-line">
+                  {item.label}
+                </p>
+              </div>
+            );
+          })}
+        </div>
         </div>
 
       </div>

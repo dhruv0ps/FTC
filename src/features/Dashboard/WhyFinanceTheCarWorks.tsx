@@ -1,17 +1,18 @@
 
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const WhyFinanceTheCarWorks = () => {
   return (
-    <section className="w-full px-4 py-24 bg-white">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="w-full px-4 py-20 bg-white font-poppins">
+      <div className="max-w-7xl mx-auto text-center">
 
         {/* HEADING */}
-        <h2 className="text-4xl md:text-5xl font-extrabold text-secondary">
+        <h2 className="text-3xl md:text-5xl font-semibold text-secondary">
           Why FinanceTheCar Works
         </h2>
 
         {/* CONTENT */}
-        <div className="mt-8 space-y-4 text-lg md:text-xl text-secondary">
+        <div className="mt-6 space-y-2 text-lg md:text-xl text-secondary">
           <p>
             Dealers use 1–3 lenders. If you don’t fit their box, you’re declined.
           </p>
@@ -44,7 +45,7 @@ const WhyFinanceTheCarWorks = () => {
             "
           >
             Enquire Now!
-            <span className="text-2xl leading-none">→</span>
+            <span className="text-2xl leading-none"><FaArrowRightLong /></span>
           </button>
         </div>
 

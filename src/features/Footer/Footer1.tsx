@@ -33,36 +33,38 @@ export default function Footer1() {
   ];
 
   return (
-    <footer className="w-[89rem] mx-auto bg-secondary text-white rounded-2xl mb-10 font-poppins">
-  <div className="max-w-7xl mx-auto px-6 py-10 lg:py-24">
+ <footer className="w-full max-w-[89rem] mx-auto bg-secondary text-white rounded-2xl mb-6 md:mb-10 font-poppins px-4">
+  <div className="max-w-7xl mx-auto py-10 sm:py-14 lg:py-24">
 
-   
-
-    {/* DIVIDER */}
-    {/* <div className="border-t border-gray-500 my-12" /> */}
-    <div className="max-w-6xl mx-auto">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
       {/* BRAND INFO */}
       <div>
         <h3 className="text-2xl font-extrabold text-primary mb-4">
           FinanceTheCar
         </h3>
-        <p className="font-semibold mb-1">info@FinanceTheCar.com.au</p>
-        <p className="font-semibold mb-6">1300 038 206</p>
-        <p className="text-xs text-gray-400 mt-10 text-nowrap">
+
+        <p className="font-semibold mb-1 break-all">
+          info@FinanceTheCar.com.au
+        </p>
+
+        <p className="font-semibold mb-6">
+          1300 038 206
+        </p>
+
+        <p className="text-xs text-gray-400 mt-6 sm:mt-10">
           All Rights Reserved To FinanceTheCar ©
         </p>
       </div>
 
       {/* LINKS COLUMN 1 */}
       <div>
-        <ul className="space-y-2 ml-12">
+        <ul className="space-y-2 sm:ml-8 lg:ml-12">
           {links1.map((link) => (
             <li key={link.label}>
               <a
                 href={link.href}
-                className="hover:text-hover font-normal transition-colors"
+                className="hover:text-hover transition-colors"
               >
                 {link.label}
               </a>
@@ -89,11 +91,11 @@ export default function Footer1() {
 
       {/* SOCIAL */}
       <div>
-        <p className="font-bold">
-          Find Us On
-        </p>
-        <div className="h-[2px] w-32 bg-hover mb-4 mt-2"></div>
-        <div className="flex gap-4 text-2xl">
+        <p className="font-bold">Find Us On</p>
+
+        <div className="h-[2px] w-24 bg-hover mb-4 mt-2"></div>
+
+        <div className="flex gap-4 text-xl sm:text-2xl">
           {socialIcons.map((icon) => {
             const IconComponent = icon.icon;
             return (
@@ -103,17 +105,17 @@ export default function Footer1() {
                 className="hover:text-hover transition-colors"
                 title={icon.name}
               >
-                <IconComponent size={24} />
+                <IconComponent size={22} />
               </a>
             );
           })}
         </div>
       </div>
-      </div>
 
     </div>
   </div>
 </footer>
+
 
   );
 }

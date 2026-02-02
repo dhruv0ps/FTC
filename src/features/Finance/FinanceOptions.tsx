@@ -44,11 +44,11 @@ const FinanceOptions = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-start">
           {/* LEFT TEXT */}
           <div>
-            <h1 className="text-4xl md:text-7xl font-semibold text-secondary leading-tight">
+            <h1 className="text-4xl md:text-7xl font-bold text-secondary leading-tight">
               Check Your <br /> Finance Options
             </h1>
 
-            <p className="mt-4 text-lg font-semibold text-primary ">
+            <p className="mt-4 text-2xl font-bold text-primary italic ">
               It takes less than 30 seconds!
             </p>
 
@@ -59,7 +59,7 @@ const FinanceOptions = () => {
 
           {/* RIGHT FORM */}
           <div className="mt-20">
-            <p className="mb-3 font-semibold font-base text-secondary">
+            <p className="mb-3 font-bold font-base text-secondary">
               Contact Form
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

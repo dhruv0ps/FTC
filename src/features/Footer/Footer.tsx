@@ -110,7 +110,7 @@ const links2 = [
             1300 038 206
           </p>
           <p className="text-xs text-gray-400 mt-6">
-            All Rights Reserved To FinanceTheCaravan ©
+            All Rights Reserved To FinanceTheCar ©
           </p>
         </div>
 
